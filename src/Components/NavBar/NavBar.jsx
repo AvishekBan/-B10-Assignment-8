@@ -2,19 +2,19 @@ const NavBar = () => {
    const links = (
       <>
          <li>
-            <a>Home</a>
+            <a className="text-white font-bold ">Home</a>
          </li>
          <li>
-            <a>Statistics</a>
+            <a className="text-white font-bold ">Statistics</a>
          </li>
          <li>
-            <a>Dashboard</a>
+            <a className="text-white font-bold ">Dashboard</a>
          </li>
       </>
    );
 
    return (
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-purple-600 border rounded-2xl ">
          <div className="navbar-start">
             <div className="dropdown">
                <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +40,7 @@ const NavBar = () => {
                   {links}
                </ul>
             </div>
-            <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+            <a className="btn btn-ghost text-xl text-white font-bold">Gadget Heaven</a>
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{links}</ul>
