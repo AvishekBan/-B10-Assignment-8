@@ -1,3 +1,5 @@
+import im2 from '../../assets/Frame (3).png';
+import im3 from '../../assets/Frame (2).png';
 const NavBar = () => {
    const links = (
       <>
@@ -45,8 +47,9 @@ const NavBar = () => {
          <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{links}</ul>
          </div>
-         <div className="navbar-end">
-            <a className="btn">Button</a>
+         <div className="navbar-end gap-2 ">
+            <a className="btn  rounded-full"><img src={im2} alt="" /></a>
+            <a className="btn rounded-full"><img src={im3} alt="" /></a>
          </div>
       </div>
    );

@@ -8,6 +8,7 @@ import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Home from "./Components/Home/Home";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Statistics from "./Components/Statistics/Statistics";
+import ProductDetail from "./Components/ProductDetail/ProductDetail";
 const router = createBrowserRouter([
    {
       path: "/",
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
           element:<Home></Home>
 
         },
+        {
+          path: 'GadgetsData/:product_id',
+          element: <ProductDetail></ProductDetail>
 
+        },
         {
           path:'statistics',
           element:<Statistics></Statistics>  

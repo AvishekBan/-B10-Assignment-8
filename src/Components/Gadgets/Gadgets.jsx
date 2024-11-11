@@ -27,6 +27,7 @@ const Gadgets = () => {
                   <button className="btn bg-white rounded-3xl border-purple-700 text-gray-600 font-bold px-20">MacBook</button>
                   <button className="btn bg-white rounded-3xl border-purple-700 text-gray-600 font-bold px-20">Iphone</button>
            </div>
+           
            <div className="grid grid-cols-3 gap-4  mx-64 my-8" >
             {
                 gadgets.map(gadget => <Gadget  gadget={gadget} key={gadget.product_id} ></Gadget>)
