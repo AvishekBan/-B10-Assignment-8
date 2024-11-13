@@ -2,15 +2,18 @@ import { useLoaderData, useParams } from "react-router-dom";
 import img4 from "../../assets/Frame (1).png";
 import img5 from "../../assets/Frame (2).png";
 import ReactStars from "react-rating-stars-component";
+import { useState } from "react";
 
 const ProductDetail = () => {
    const { id } = useParams();
    const data = useLoaderData();
+   const [ratings, setRatings] = useState(null);
+
    const mainData = data.find((phone) => phone.product_id === id);
    console.log(mainData);
 
    const ratingChanged = (newRating) => {
-      console.log(newRating);
+      setRatings(newRating);
    };
 
    return (
@@ -45,6 +48,7 @@ const ProductDetail = () => {
                <h4 className="font-bold">Rating ⭐ </h4>
                <p className="py-2">
                   <ReactStars count={5} onChange={ratingChanged} size={24} activeColor="#ffd700" />
+                  <button>{ratings}</button>
                </p>
                <div className="flex gap-3 ">
                   <button className="btn bg-purple-600 text-white rounded-3xl text-lg font-bold">

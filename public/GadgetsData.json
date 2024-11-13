@@ -3,7 +3,7 @@
       "product_id": "G001",
       "product_title": "HP OMEN 16",
       "product_image": "https://i.ibb.co.com/VgjzRVZ/HP-Omen.png",
-      "category": "Computers",
+      "category": "Laptops",
       "price": 1299.99,
       "description": "High-performance gaming laptop with advanced graphics and cooling system.",
       "specification": [
@@ -19,7 +19,7 @@
       "product_id": "G002",
       "product_title": "iPhone 16 Pro Max",
       "product_image": "https://i.ibb.co.com/LJMDSDM/Apple-i-Phone-16-Pro-jpg-large.jpg",
-      "category": "Phones",
+      "category": "Iphone",
       "price": 999.99,
       "description": "Latest smartphone with an ultra-fast processor and advanced camera system.",
       "specification": [
@@ -35,7 +35,7 @@
       "product_id": "G003",
       "product_title": "Pixel 9 Pro XL",
       "product_image": "https://i.ibb.co.com/4T4zZYg/Post-Template-98.webp",
-      "category": "Smart Watches",
+      "category": "Phones",
       "price": 399.99,
       "description": "Feature-packed smartwatch with fitness tracking and heart rate monitoring.",
       "specification": [
@@ -51,7 +51,7 @@
       "product_id": "G004",
       "product_title": "Xiaomi IMILAB",
       "product_image": "https://i.ibb.co.com/ynYKJFh/IMILAB-W02.webp",
-      "category": "Chargers",
+      "category": "Smart Watches",
       "price": 29.99,
       "description": "Fast wireless charging stand compatible with most smartphones.",
       "specification": [
@@ -67,7 +67,7 @@
       "product_id": "G005",
       "product_title": "HP Pavilion 15",
       "product_image": "https://i.ibb.co.com/DG3VXKM/HP-Pavilion-Laptop-14-dv2053-TU.webp",
-      "category": "Power Banks",
+      "category": "Laptops",
       "price": 39.99,
       "description": "High-capacity portable power bank with dual USB output for multiple devices.",
       "specification": [
@@ -83,7 +83,7 @@
       "product_id": "G006",
       "product_title": "MacBook Air",
       "product_image": "https://i.ibb.co.com/Bj2b0YB/Apple-Mac-Book-Pro-14-16-inch-10182021-big-jpg-large.jpg",
-      "category": "Computers",
+      "category": "MacBook",
       "price": 899.99,
       "description": "Sleek 2-in-1 laptop with touch screen and stylus support for versatile use.",
       "specification": [
@@ -115,7 +115,7 @@
       "product_id": "G008",
       "product_title": "DELL Alienware",
       "product_image": "https://i.ibb.co.com/g9vGmTL/alienware-18-2.jpg",
-      "category": "Chargers",
+      "category": "Laptops",
       "price": 49.99,
       "description": "Multi-device charging station with fast USB ports and wireless charging.",
       "specification": [
@@ -131,7 +131,7 @@
       "product_id": "G009",
       "product_title": "Galaxy S24 Ultra",
       "product_image": "https://i.ibb.co.com/rfxbShS/Samsung-Galaxy-S24-ultra-Titanium-Gray-800x800.jpg",
-      "category": "Smart Watches",
+      "category": "Phones",
       "price": 199.99,
       "description": "Affordable smartwatch with basic fitness tracking and notifications.",
       "specification": [
