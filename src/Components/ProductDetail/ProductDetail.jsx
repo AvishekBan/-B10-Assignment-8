@@ -3,6 +3,9 @@ import img4 from "../../assets/Frame (1).png";
 import img5 from "../../assets/Frame (2).png";
 import ReactStars from "react-rating-stars-component";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductDetail = () => {
    const { id } = useParams();
@@ -15,9 +18,35 @@ const ProductDetail = () => {
    const ratingChanged = (newRating) => {
       setRatings(newRating);
    };
+   const handleAddToCart = () => {
+      // Get cart data from localStorage
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // Check if product is already in the cart
+      if (!cart.includes(id)) {
+         cart.push(id); // Add product ID to cart
+         localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+         toast.success("Product added to cart!");
+      } else {
+         toast.error("Product is already in the cart!");
+      }
+   };
+
+   const handleWishlist = () => {
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      if (!wishlist.includes(id)) {
+         wishlist.push(id);
+         localStorage.setItem("wishlist", JSON.stringify(wishlist));
+         toast.success("Product Added to Wishlist");
+      } else {
+         toast.error("Product already in the Wishlist!");
+      }
+   };
 
    return (
       <div>
+         <ToastContainer position="top-center" />
+
          <div className="bg-purple-600 text-center rounded-xl py-6">
             <h1 className=" text-2xl font-bold text-white ">Product Details</h1>
             <p className=" text-gray-200 py-2">
@@ -51,10 +80,13 @@ const ProductDetail = () => {
                   <button>{ratings}</button>
                </p>
                <div className="flex gap-3 ">
-                  <button className="btn bg-purple-600 text-white rounded-3xl text-lg font-bold">
+                  <button
+                     onClick={handleAddToCart}
+                     className="btn bg-purple-600 text-white rounded-3xl text-lg font-bold"
+                  >
                      Add To Card <img src={img4} alt="" />{" "}
                   </button>{" "}
-                  <button className="btn">
+                  <button onClick={handleWishlist} className="btn">
                      <img src={img5} alt="" />
                   </button>
                </div>

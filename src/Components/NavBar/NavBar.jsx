@@ -1,22 +1,29 @@
-import im2 from '../../assets/Frame (3).png';
-import im3 from '../../assets/Frame (2).png';
+import im2 from "../../assets/Frame (3).png";
+import im3 from "../../assets/Frame (2).png";
+import { Link } from "react-router-dom";
 const NavBar = () => {
    const links = (
       <>
          <li>
-            <a className="text-white font-bold ">Home</a>
+            <Link to="/" className="text-white font-bold">
+               Home
+            </Link>
          </li>
          <li>
-            <a className="text-white font-bold ">Statistics</a>
+            <Link to="/statistics" className="text-white font-bold">
+               Statistics
+            </Link>
          </li>
          <li>
-            <a className="text-white font-bold ">Dashboard</a>
+            <Link to="/dashboard" className="text-white font-bold">
+               Dashboard
+            </Link>
          </li>
       </>
    );
 
    return (
-      <div className="navbar bg-purple-600 border rounded-2xl ">
+      <div className="navbar bg-purple-600 rounded-t-2xl ">
          <div className="navbar-start">
             <div className="dropdown">
                <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,8 +55,12 @@ const NavBar = () => {
             <ul className="menu menu-horizontal px-1">{links}</ul>
          </div>
          <div className="navbar-end gap-2 ">
-            <a className="btn  rounded-full"><img src={im2} alt="" /></a>
-            <a className="btn rounded-full"><img src={im3} alt="" /></a>
+            <a className="btn  rounded-full">
+               <img src={im2} alt="" />
+            </a>
+            <a className="btn rounded-full">
+               <img src={im3} alt="" />
+            </a>
          </div>
       </div>
    );
