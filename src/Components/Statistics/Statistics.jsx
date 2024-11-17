@@ -8,7 +8,9 @@ const Statistics = () => {
             <link rel="canonical" href="http://mysite.com/example" />
          </Helmet>
 
-         <h2>here is the graph of statistics</h2>
+         <h2 className="text-center text-gray-700 text-xl font-bold py-8">
+            NOT Ready for The Graph of Statistics Yet!!
+         </h2>
       </div>
    );
 };
