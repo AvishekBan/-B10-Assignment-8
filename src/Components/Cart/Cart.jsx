@@ -87,27 +87,29 @@ const Cart = () => {
             {sortedItems.length === 0 ? (
                <p className="text-center text-gray-500 text-lg">Your cart is empty!</p>
             ) : (
-               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+               <div className="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-3 gap-6">
                   {sortedItems.map((item) => (
                      <div
                         key={item.product_id}
-                        className="bg-white border rounded-lg p-4 shadow-md flex flex-col items-center"
+                        className="bg-white border rounded-lg p-4 shadow-md flex "
                      >
                         <img
-                           className="h-[150px] w-[180px] rounded-xl mb-4"
+                           className="h-[150px] w-[180px] rounded-xl mb-4 mx-2"
                            src={item.product_image}
                            alt={item.product_title}
                         />
-                        <div className="text-center">
-                           <h1 className="text-xl font-bold">{item.product_title}</h1>
-                           <p className="text-gray-600">{item.description}</p>
-                           <p className="text-lg font-bold">Price: ${item.price}</p>
+                        <div>
+                           <div className="pt-8">
+                              <h1 className="text-xl font-bold">{item.product_title}</h1>
+                              <p className="text-gray-600">{item.description}</p>
+                              <p className="text-gray-500 font-bold">Price: ${item.price}</p>
+                           </div>
                         </div>
                         <button
                            onClick={() => handleRemoveFromCart(item.product_id)}
-                           className="mt-4 flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-md"
+                           className="ml-8 flex items-center   h-6  border border-red-600 rounded-full mt-14"
                         >
-                           Remove <img className="h-4 w-4" src={img8} alt="Remove Icon" />
+                           <img className="" src={img8} alt="Remove Icon" />
                         </button>
                      </div>
                   ))}

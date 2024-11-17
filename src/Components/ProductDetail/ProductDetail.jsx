@@ -47,7 +47,7 @@ const ProductDetail = () => {
       <div>
          <ToastContainer position="top-center" />
 
-         <div className="bg-purple-600 text-center rounded-xl py-6">
+         <div className="bg-purple-600 text-center rounded-b-xl py-6 ">
             <h1 className=" text-2xl font-bold text-white ">Product Details</h1>
             <p className=" text-gray-200 py-2">
                Explore the latest gadgets that will take your experience to the next level. From

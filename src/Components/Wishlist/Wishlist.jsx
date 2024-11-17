@@ -1,3 +1,5 @@
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import img7 from "../../assets/close.png";
 import { useEffect, useState } from "react";
 const Wishlist = () => {
@@ -22,9 +24,9 @@ const Wishlist = () => {
       if (!cart.includes(id)) {
          cart.push(id);
          localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
-         alert("Product added to cart!");
+         toast.success("Product added to cart!");
       } else {
-         alert("Product is already in the cart!");
+         toast.error("Product is already in the cart!");
       }
    };
 
@@ -33,22 +35,30 @@ const Wishlist = () => {
          (wishlistItems) => wishlistItems.product_id !== id
       );
       setWishlistItems(updatedWishlist);
+      // Update localStorage
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const updatedLocalWishlist = wishlist.filter((wishlistId) => wishlistId !== id); // Remove ID from localStorage cart
+      localStorage.setItem("wishlist", JSON.stringify(updatedLocalWishlist));
    };
+
    return (
-      <div className=" bg-white">
-         <h1 className="text-md font-bold">WishList</h1>
+      <div className=" bg-white ml-56">
+         <ToastContainer position="top-center" />
+         <h1 className="text-xl font-bold">WishList</h1>
          {wishlistItems.map((wishlist) => (
             <>
-               <div className=" flex">
+               <div className=" flex gap-8 ">
                   <img
                      className="h-[150px] w-[180px] rounded-xl"
                      src={wishlist.product_image}
                      alt=""
                   />
                   <div>
-                     <h1>{wishlist.product_title}</h1>
-                     <p>Description:{wishlist.description}</p>
-                     <p>Price:{wishlist.price}</p>
+                     <h1 className="text-xl font-semibold">{wishlist.product_title}</h1>
+                     <p>
+                        <b>Description</b>:{wishlist.description}
+                     </p>
+                     <p className="text-gray-500 font-bold">Price:${wishlist.price}</p>
                      <button
                         onClick={() => handleAddToCart(wishlist.product_id)}
                         className="btn text-white bg-purple-600 px-6 rounded-3xl"
@@ -56,7 +66,10 @@ const Wishlist = () => {
                         Add to Cart
                      </button>
                   </div>
-                  <button onClick={() => handleRemoveFromWish(wishlist.product_id)}>
+                  <button
+                     className="mx-4 border border-red-600 rounded-full mt-14 h-6"
+                     onClick={() => handleRemoveFromWish(wishlist.product_id)}
+                  >
                      <img className="" src={img7} alt="" />
                   </button>
                </div>
